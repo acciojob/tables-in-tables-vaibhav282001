@@ -1,14 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <table style="width: 100%; height: 100%">
-      <!-- Your code here -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested HTML Tables</title>
+
+    <style>
+        table {
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: center;
+        }
+
+        .main-table {
+            height: 420px;
+        }
+
+        .main-table td {
+            width: 50%;
+            height: 200px;
+        }
+
+        .nested-table {
+            width: 100%;
+        }
+
+        .html-cell {
+            background-color: black;
+            color: white;
+        }
+
+        .nested-link {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="main-table" cellspacing="2" cellpadding="3">
+
+        <tr>
+
+            <!-- Top Left: Nested Table 2 -->
+            <td>
+
+                <table class="nested-table" cellspacing="2">
+
+                    <tr>
+                        <th colspan="2">Nested Table 2</th>
+                    </tr>
+
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+
+                    <tr>
+                        <td>abc</td>
+                        <td>def</td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+            <!-- Top Right: Nested Table 1 -->
+            <td>
+
+                <table class="nested-table" cellspacing="2">
+
+                    <tr>
+                        <th>Nested Table 1</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>List item</li>
+                                <li>List item</li>
+                                <li>List item</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <!-- Bottom Left: Nested Table 3 -->
+            <td>
+
+                <table class="nested-table" cellspacing="2">
+
+                    <tr>
+                        <th colspan="2">Nested Table 3</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="#" class="nested-link">
+                                Nested Table
+                            </a>
+                        </td>
+
+                        <td>Demo Continued</td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+            <!-- Bottom Right: Nested Table 4 -->
+            <td>
+
+                <table class="nested-table" cellspacing="2">
+
+                    <tr>
+                        <th>Nested Table 4</th>
+                    </tr>
+
+                    <tr>
+                        <td class="html-cell">HTML</td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
     </table>
-  </body>
+
+</body>
 </html>
